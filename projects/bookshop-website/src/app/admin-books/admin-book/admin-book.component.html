@@ -1,0 +1,86 @@
+kefkekfek
+<section class="bs-admin-create">
+                <div class="bs-container">
+                        <div class="card">
+                                <div class="card-header">
+                                        <h3>Insert New Book</h3>
+                                </div>
+                                <div class="card-body">
+                                        <form (ngSubmit)="crear()">
+                                        <div class="form-group">
+						<label for="create-book-rating">Rating</label>
+						<input
+							id="create-book-rating"
+							type="number"
+							name="rating"
+							#ratingField="ngModel"
+							class="form-control"
+							required
+							[ngClass]="{ 'is-invalid': ratingField.touched && ratingField.invalid }"
+							[(ngModel)]="book.rating"
+						/>
+                                        </div>
+                                        <div class="form-group">
+                                                        <label for="create-book-rating">title</label>
+                                                        <input
+                                                                id="create-book-rating"
+                                                                type="text"
+                                                                name="title"
+                                                                #ratingField="ngModel"
+                                                                class="form-control"
+                                                                required
+                                                                [ngClass]="{ 'is-invalid': ratingField.touched && ratingField.invalid }"
+                                                                [(ngModel)]="book.title"
+                                                        />
+                                                </div>
+                                                <div class="form-group">
+                                                                <label for="create-book-rating">author</label>
+                                                                <input
+                                                                        id="create-book-rating"
+                                                                        type="text"
+                                                                        name="author"
+                                                                        #ratingField="ngModel"
+                                                                        class="form-control"
+                                                                        required
+                                                                        [ngClass]="{ 'is-invalid': ratingField.touched && ratingField.invalid }"
+                                                                        [(ngModel)]="book.author"
+                                                                />
+                                                        </div>
+
+                                                        <div class="form-group">
+                                                                        <label for="create-book-rating">price</label>
+                                                                        <input
+                                                                                id="create-book-rating"
+                                                                                type="number"
+                                                                                name="price"
+                                                                                #ratingField="ngModel"
+                                                                                class="form-control"
+                                                                                required
+                                                                                [ngClass]="{ 'is-invalid': ratingField.touched && ratingField.invalid }"
+                                                                                [(ngModel)]="book.price"
+                                                                        />
+                                                                </div>
+
+                                                                <div class="form-group">
+                                                                                <label for="create-book-rating">reviews</label>
+                                                                                <input
+                                                                                        id="create-book-rating"
+                                                                                        type="number"
+                                                                                        name="reviews"
+                                                                                        #ratingField="ngModel"
+                                                                                        class="form-control"
+                                                                                        required
+                                                                                        [ngClass]="{ 'is-invalid': ratingField.touched && ratingField.invalid }"
+                                                                                        [(ngModel)]="book.reviews"
+                                                                                />
+                                                                        </div>
+                                                                  
+                                                
+        
+                                                <button type="submit"  (click)="crear()" class="btn btn-primary">Insert</button>
+                                                <!-- <code><pre>{{ emailField.errors | json }}</pre></code> -->
+                                        </form>
+                                </div>
+                        </div>
+                </div>
+        </section>

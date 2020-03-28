@@ -1,0 +1,33 @@
+<div class="bs-container">
+
+       
+
+<table class="table">
+<tr>
+    <th>id</th>
+    <th>title</th>
+    <th>author</th>
+    <th>price</th>
+    <th>publish date</th>
+    <th>Nuevo Book</th>
+    <th>borar</th>
+</tr>  
+<tr class="bs-books__item" *ngFor="let book of books">
+        <td>{{ book.id }}</td>
+        <td>{{ book.title }}</td>
+        <td>{{ book.author }}</td>
+        <td>{{ book.price | currency :'$'}}</td>
+        <td>{{ book.publishedDate | date:'MM-yyyy' }}</td>
+        <td> <a routerLink='/adminbooks/{{book.id}}'  class="nav-link">
+                    <fa-icon [icon]="faShoppingCart"></fa-icon>
+                </a>
+        </td>
+        <td>
+            <a (click) ='delete(book.id)' class="nav-link">
+            <fa-icon [icon]="faUser"></fa-icon>
+        </a></td>
+</tr>
+</table>
+
+<button type="button" class="btn btn-primary">Crear</button>
+</div>
